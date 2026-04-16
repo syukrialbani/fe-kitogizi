@@ -1,6 +1,7 @@
 .appbar {
-  background-color: var(--bg-color, #ffffff);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 1px 0 rgba(0, 154, 153, 0.14);
   position: sticky;
   top: 0;
   width: 100%;
@@ -11,20 +12,22 @@
 .appbar-container {
   max-width: 75rem;
   margin: 0 auto;
-  padding: 0.5rem 1rem;
-  height: 70px;
+  padding: 0.55rem 1rem;
+  height: 74px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .appbar-logo a {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color, #2563eb);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--primary-color, #00aead);
   text-decoration: none;
   display: flex;
   align-items: center;
+  letter-spacing: -0.015em;
 }
 
 .appbar-nav {
@@ -37,19 +40,19 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 24px;
+  gap: 28px;
 }
 
 .appbar-nav-item a {
-  color: var(--text-color, #374151);
+  color: var(--text-color, #24363c);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
   transition: color 0.2s ease;
 }
 
 .appbar-nav-item a:hover {
-  color: var(--primary-color, #2563eb);
+  color: var(--primary-color, #00aead);
 }
 
 .appbar-actions {
@@ -62,7 +65,6 @@
   margin-top: 10px;
 }
 
-/* Mobile Toggle */
 .appbar-mobile-toggle {
   background: transparent;
   border: none;
@@ -77,7 +79,7 @@
   display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--text-color, #374151);
+  background-color: var(--text-color, #24363c);
   position: relative;
   transition: background-color 0.2s ease;
 }
@@ -88,7 +90,7 @@
   position: absolute;
   width: 24px;
   height: 2px;
-  background-color: var(--text-color, #374151);
+  background-color: var(--text-color, #24363c);
   transition: transform 0.2s ease, top 0.2s ease, bottom 0.2s ease;
 }
 
@@ -116,15 +118,14 @@
   transform: rotate(-45deg);
 }
 
-/* Mobile Nav */
 .appbar-mobile-nav {
-  background-color: var(--bg-color, #ffffff);
-  border-top: 1px solid var(--border-color, #e5e7eb);
+  background-color: #ffffff;
+  border-top: 1px solid rgba(0, 154, 153, 0.2);
   position: absolute;
-  top: 70px;
+  top: 74px;
   left: 0;
   width: 100%;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 154, 153, 0.12);
 }
 
 .appbar-mobile-nav-list {
@@ -139,13 +140,12 @@
 .appbar-mobile-nav-item a {
   display: block;
   padding: 8px 0;
-  color: var(--text-color, #374151);
+  color: var(--text-color, #24363c);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.1rem;
 }
 
-/* Responsive Display Classes */
 @media (min-width: 769px) {
   .mobile-only {
     display: none !important;
@@ -155,5 +155,9 @@
 @media (max-width: 768px) {
   .desktop-only {
     display: none !important;
+  }
+
+  .appbar-logo a {
+    font-size: 1.7rem;
   }
 }
