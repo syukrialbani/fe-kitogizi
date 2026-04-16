@@ -1,12 +1,25 @@
 .app {
-  --primary-color: #22c55e;
-  --primary-hover: #16a34a;
-  --surface-color: #f8fafc;
-  --text-color: #0f172a;
-  --muted-text: #475569;
-  --border-color: #e2e8f0;
+  --primary-color: var(--brand-cyan);
+  --primary-hover: var(--brand-teal);
+  --accent-color: var(--brand-orange);
+  --surface-color: #edf7f0;
+  --text-color: var(--ink-strong);
+  --muted-text: var(--ink-body);
+  --border-color: var(--border-soft);
   min-height: 100vh;
-  background: linear-gradient(180deg, #f9fafb 0%, #f8fafc 100%);
+  background: linear-gradient(120deg, #baeacc 0%, #cfdde0 100%);
+  position: relative;
+}
+
+.app::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, var(--brand-cyan) 0%, #4852d7 100%);
+  z-index: 1200;
 }
 
 .main-content {
