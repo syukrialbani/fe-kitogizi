@@ -1,0 +1,159 @@
+.appbar {
+  background-color: var(--bg-color, #ffffff);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.appbar-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appbar-logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color, #2563eb);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.appbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.appbar-nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 24px;
+}
+
+.appbar-nav-item a {
+  color: var(--text-color, #374151);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.appbar-nav-item a:hover {
+  color: var(--primary-color, #2563eb);
+}
+
+.appbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.appbar-mobile-cta {
+  margin-top: 10px;
+}
+
+/* Mobile Toggle */
+.appbar-mobile-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-color, #374151);
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-color, #374151);
+  transition: transform 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+}
+
+.hamburger::before {
+  top: -6px;
+  left: 0;
+}
+
+.hamburger::after {
+  bottom: -6px;
+  left: 0;
+}
+
+.hamburger.open {
+  background-color: transparent;
+}
+
+.hamburger.open::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.hamburger.open::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+/* Mobile Nav */
+.appbar-mobile-nav {
+  background-color: var(--bg-color, #ffffff);
+  border-top: 1px solid var(--border-color, #e5e7eb);
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.appbar-mobile-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.appbar-mobile-nav-item a {
+  display: block;
+  padding: 8px 0;
+  color: var(--text-color, #374151);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+/* Responsive Display Classes */
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
