@@ -27,7 +27,7 @@
 
 .hero-title {
   margin: 0;
-  font-size: clamp(2.3rem, 5.6vw, 5rem);
+  font-size: clamp(2rem, 5.3vw, 4.7rem);
   line-height: 1.08;
   letter-spacing: -0.02em;
   font-weight: 800;
@@ -80,8 +80,7 @@
 
 .hero-stat-card {
   position: absolute;
-  left: 24px;
-  bottom: -28px;
+  bottom: -2.5rem;
   background: #ffffff;
   border-radius: 16px;
   padding: 16px 18px;
