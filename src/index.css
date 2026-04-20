@@ -3,6 +3,7 @@
 :root {
   --brand-cyan: #00aead;
   --brand-teal: #009a99;
+  --brand-teal-bg: #e6f7f7;
   --brand-orange: #ffa500;
   --brand-white: #ffffff;
   --ink-strong: #24363c;
@@ -13,7 +14,7 @@
   font-size: 18px;
   line-height: 1.45;
   color: var(--ink-body);
-  background: #f3f6f7;
+  background: var(--brand-white);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,7 +29,7 @@ body {
   margin: 0;
   font-family: inherit;
   color: var(--ink-body);
-  background: #f3f6f7;
+  background: var(--brand-white);
 }
 
 #root {

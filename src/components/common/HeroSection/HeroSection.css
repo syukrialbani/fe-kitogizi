@@ -80,6 +80,7 @@
 
 .hero-stat-card {
   position: absolute;
+  left: -1.5rem;
   bottom: -2.5rem;
   background: #ffffff;
   border-radius: 16px;
