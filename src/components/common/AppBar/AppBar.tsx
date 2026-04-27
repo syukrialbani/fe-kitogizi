@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '../Button';
 import './AppBar.css';
+import logo from '../../../assets/Logo.png';
 
 const AppBar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,7 +15,10 @@ const AppBar: React.FC = () => {
       <div className="appbar-container">
         {/* Logo Section */}
         <div className="appbar-logo">
-          <a href="/">KitoGizi</a>
+          <a href="/">
+            <img src={logo} alt="KitoGizi Logo" />
+            KitoGizi
+          </a>
         </div>
 
         {/* Desktop Navigation */}

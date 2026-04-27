@@ -1,5 +1,6 @@
 import { Button } from '../Button';
 import './HeroSection.css';
+import HeroCard from '../../../assets/heroCard.png';
 
 const HeroSection = () => {
   return (
@@ -26,10 +27,10 @@ const HeroSection = () => {
         <div className="hero-visual">
           <img
             className="hero-image"
-            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1400&q=80"
+            src={HeroCard}
             alt="Healthy meal and workspace setup"
           />
-          <div className="hero-stat-card">
+          {/* <div className="hero-stat-card">
             <div className="hero-stat-icon" aria-hidden="true">
               <span>N</span>
             </div>
@@ -37,7 +38,7 @@ const HeroSection = () => {
               <p className="hero-stat-label">Healthier Teams</p>
               <p className="hero-stat-value">500+ Companies</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
