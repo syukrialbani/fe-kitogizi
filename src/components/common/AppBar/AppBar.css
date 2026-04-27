@@ -20,14 +20,23 @@
 }
 
 .appbar-logo a {
-  font-size: 2rem;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
   font-weight: 800;
   line-height: 1;
   color: var(--primary-color, #00aead);
   text-decoration: none;
   display: flex;
   align-items: center;
+  gap: 0.5rem;
   letter-spacing: -0.015em;
+}
+
+.appbar-logo img {
+  height: clamp(2rem, 3.2vw, 2.6rem);
+  width: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
 }
 
 .appbar-nav {
@@ -158,6 +167,11 @@
   }
 
   .appbar-logo a {
-    font-size: 1.7rem;
+    font-size: 1.25rem;
+    gap: 0.4rem;
+  }
+
+  .appbar-logo img {
+    height: 2rem;
   }
 }
