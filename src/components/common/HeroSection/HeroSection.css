@@ -75,7 +75,6 @@
   min-height: 460px;
   object-fit: cover;
   border-radius: 22px;
-  box-shadow: 0 26px 44px rgba(0, 64, 63, 0.18);
 }
 
 .hero-stat-card {
