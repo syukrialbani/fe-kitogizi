@@ -105,7 +105,7 @@ const OurService = () => {
       <div className="ourservice-container">
         <div className="ourservice-headline-row">
           <div className="ourservice-header">
-            <div className="ourservice-badge">Our Service</div>
+            <p className="ourservice-badge">Our Service</p>
             <h2 className="ourservice-title">Assisting Your Needs</h2>
             <p className="ourservice-subtitle">
               Integrated nutrition services designed for individuals and
