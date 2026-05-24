@@ -1,25 +1,14 @@
-import { AppBar } from './components/common/AppBar';
-import { HeroSection } from './components/common/HeroSection';
-import './App.css';
-import { AboutUs } from './components/common/AboutUs';
-import { OurTraction } from './components/common/OurTraction';
-import OurService from './components/common/OurServices/OurService';
-import { Portfolio } from './components/common/Portfolio';
-import { Footer } from './components/common/Footer';
+import { BrowserRouter } from 'react-router-dom';
+import { AppRouter } from './app/router/AppRouter';
+import { ScrollToTop } from './shared/lib/ScrollToTop';
+import './app/styles/app.css';
 
 function App() {
   return (
-    <div className="app">
-      <AppBar />
-      <main className="main-content">
-        <HeroSection />
-        <AboutUs />
-        <OurTraction />
-        <OurService />
-        <Portfolio />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <AppRouter />
+    </BrowserRouter>
   );
 }
 
