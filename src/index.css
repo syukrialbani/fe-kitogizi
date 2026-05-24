@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --brand-cyan: #00aead;
-  --brand-teal: #009a99;
-  --brand-teal-bg: #e6f7f7;
+  --brand-teal: #009f9d;
+  --brand-teal-strong: #087f83;
+  --brand-mint: #e8f7f3;
   --brand-orange: #ffa500;
   --brand-white: #ffffff;
-  --ink-strong: #24363c;
-  --ink-body: #4f6369;
-  --border-soft: #cde7d8;
+  --ink-strong: #19343a;
+  --ink-body: #53686e;
+  --border-soft: #d7e9e5;
 
   font-family: 'Raleway', 'Segoe UI', Tahoma, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.45;
   color: var(--ink-body);
-  background: var(--brand-white);
+  background: #ffffff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -25,11 +25,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: inherit;
   color: var(--ink-body);
-  background: var(--brand-white);
+  background: #ffffff;
+  overflow-x: hidden;
 }
 
 #root {
@@ -54,4 +59,11 @@ h6 {
 
 p {
   margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
 }
