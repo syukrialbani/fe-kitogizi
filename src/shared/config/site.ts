@@ -1,10 +1,11 @@
 export const contact = {
   brandName: 'KitoGizi',
   legalName: 'PT Kitojum Sehat Bersama',
-  email: 'kitogizi@gmail.com',
-  phoneDisplay: '+62 812-0000-0000',
-  whatsappNumber: '6281200000000',
-  location: 'Karawang, Indonesia',
+  email: 'hello.kitogizi@gmail.com',
+  phoneDisplay: '0821-2244-5687',
+  whatsappNumber: '6282122445687',
+  location:
+    'Berbasis di Karawang dan melayani area Cikarang & Jabodetabek untuk berbagai program wellness secara onsite maupun online.',
 };
 
 export const whatsappMessage =
@@ -24,7 +25,6 @@ export const navItems = [
   { label: 'Corporate Wellness', href: '/corporate-wellness' },
   { label: 'Wellness Experience', href: '/wellness-experience' },
   { label: 'School Wellness', href: '/school-wellness' },
-  { label: 'Case Study', href: '/case-study' },
   { label: 'Tentang Kami', href: '/tentang-kami' },
   { label: 'Kontak', href: '/kontak' },
 ];

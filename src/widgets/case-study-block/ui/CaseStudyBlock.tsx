@@ -26,7 +26,7 @@ export const CaseStudyBlock = ({ compact = false }: CaseStudyBlockProps) => {
               </li>
             ))}
           </ul>
-          <ActionLink href="/case-study" variant="secondary">
+          <ActionLink href="/corporate-wellness#case-study-corporate" variant="secondary">
             Pelajari Case Study
           </ActionLink>
         </div>

@@ -1,7 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { PublicLayout } from '../layouts/PublicLayout';
 import { AboutPage } from '../../pages/about';
-import { CaseStudyPage } from '../../pages/case-study';
 import { ContactPage } from '../../pages/contact';
 import { CorporateWellnessPage } from '../../pages/corporate-wellness';
 import { HomePage } from '../../pages/home';
@@ -16,7 +15,6 @@ export const AppRouter = () => {
         <Route path="corporate-wellness" element={<CorporateWellnessPage />} />
         <Route path="wellness-experience" element={<WellnessExperiencePage />} />
         <Route path="school-wellness" element={<SchoolWellnessPage />} />
-        <Route path="case-study" element={<CaseStudyPage />} />
         <Route path="tentang-kami" element={<AboutPage />} />
         <Route path="kontak" element={<ContactPage />} />
       </Route>

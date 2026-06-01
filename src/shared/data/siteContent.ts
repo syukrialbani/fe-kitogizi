@@ -26,7 +26,7 @@ export const impactStats = [
   { value: '2000+', label: 'Sesi konsultasi', description: 'Pendampingan dan edukasi peserta' },
   { value: '80+', label: 'Karyawan', description: 'Dalam satu program' },
   { value: '95%', label: 'Peserta', description: 'Mengalami perbaikan' },
-  { value: '3+', label: 'Kolaborasi', description: 'Program kesehatan dan wellness' },
+  { value: '5+', label: 'Kolaborasi', description: 'Program kesehatan dan wellness' },
 ];
 
 export const homeProblems = [
@@ -39,55 +39,48 @@ export const homeProblems = [
 export const processSteps = [
   {
     title: 'Assessment',
-    description: 'Analisis data kesehatan karyawan, termasuk MCU dan lifestyle.',
+    description: 'Analisis data kesehatan karyawan (MCU & lifestyle)',
   },
   {
     title: 'Strategy Design',
-    description: 'Menentukan prioritas dan program intervensi.',
+    description: 'Menentukan prioritas dan program intervensi',
   },
   {
     title: 'Implementation',
-    description: 'Pelaksanaan program edukasi dan intervensi.',
+    description: 'Pelaksanaan program edukasi & intervensi',
   },
   {
     title: 'Monitoring & Evaluation',
-    description: 'Evaluasi berkala untuk memastikan hasil.',
+    description: 'Monitoring berkala untuk membantu melihat perkembangan dan efektivitas program.',
   },
 ];
 
 export const dataToProgramPoints = [
-  'Analisis data kesehatan karyawan, termasuk hasil MCU',
-  'Identifikasi risiko utama',
-  'Perancangan program intervensi berbasis kebutuhan',
-  'Monitoring dan evaluasi berkala',
+  'Analisis data kesehatan',
+  'Penentuan prioritas intervensi',
+  'Program berbasis risiko',
+  'Monitoring berkelanjutan',
 ];
 
 export const homeServices = [
   {
-    title: 'Corporate Wellness Program',
+    title: 'Corporate Wellness Program (highlight)',
     description:
-      'Program kesehatan berbasis data untuk meningkatkan produktivitas dan membantu perusahaan mengelola risiko kesehatan karyawan.',
+      'Program kesehatan berbasis data untuk membantu perusahaan membangun budaya kerja yang lebih sehat, produktif, dan berkelanjutan dan mengelola risiko kesehatan karyawan.',
     cta: 'Lihat Layanan',
     href: '/corporate-wellness',
   },
   {
-    title: 'Nutrition Consultation',
+    title: 'Wellness Experience',
     description:
-      'Pendampingan individu dan kelompok untuk membantu mencapai tujuan kesehatan secara lebih terarah dan berkelanjutan.',
+      'Pendampingan, konsultasi gizi & wellness, workshop, dan wellness session yang dirancang untuk individu, keluarga, komunitas, private group, maupun berbagai bentuk kolaborasi healthy lifestyle.',
     cta: 'Lihat Layanan',
     href: '/wellness-experience',
   },
   {
-    title: 'Wellness Workshop & Education',
+    title: 'School Wellness Program (opsional)',
     description:
-      'Seminar, workshop, dan sesi edukasi interaktif untuk perusahaan, komunitas, sekolah, maupun grup privat.',
-    cta: 'Lihat Layanan',
-    href: '/wellness-experience',
-  },
-  {
-    title: 'School Wellness Program',
-    description:
-      'Program edukasi gizi dan wellness untuk membangun kebiasaan sehat sejak dini.',
+      'Program edukasi gizi dan wellness untuk membantu sekolah membangun kebiasaan hidup sehat sejak dini melalui pendekatan yang interaktif, edukatif, dan berkelanjutan.',
     cta: 'Lihat Layanan',
     href: '/school-wellness',
   },
@@ -137,20 +130,6 @@ export const homeCorporatePrograms = [
   },
 ];
 
-export const mcuFollowUpPoints = [
-  'Analisis data',
-  'Penentuan prioritas',
-  'Program intervensi',
-  'Monitoring',
-];
-
-export const mcuMaximizePoints = [
-  'Analisis data kesehatan',
-  'Penentuan prioritas intervensi',
-  'Program berbasis risiko',
-  'Monitoring berkelanjutan',
-];
-
 export const beliefPoints = [
   'Berbasis evidence, ilmiah, dan aplikatif',
   'Dipandu langsung oleh ahli gizi profesional',
@@ -161,10 +140,27 @@ export const beliefPoints = [
 ];
 
 export const homeWellnessExperience = [
-  'Wellness Session & Workshop',
-  'Community & Brand Collaboration',
   'Nutrition Consultation',
-  'Private / Group Wellness Session',
+  'Wellness Session & Workshop',
+  'Wellness Session & Workshop, Community & Brand Collaboration',
+];
+
+export const programDocumentations = [
+  {
+    title: 'Konsultasi & pendampingan peserta',
+    description: 'Dokumentasi sesi konsultasi individu maupun kelompok dalam program wellness.',
+    tag: 'Konsultasi',
+  },
+  {
+    title: 'Seminar dan health talk',
+    description: 'Dokumentasi edukasi kesehatan, nutrition talk, dan sesi awareness untuk peserta.',
+    tag: 'Seminar',
+  },
+  {
+    title: 'Workshop interaktif',
+    description: 'Dokumentasi aktivitas workshop, challenge, dan campaign yang melibatkan peserta.',
+    tag: 'Workshop',
+  },
 ];
 
 export const corporatePackages = [
@@ -237,7 +233,7 @@ export const caseStudy = {
     'Kolaborasi berkelanjutan untuk membangun budaya sehat dan meningkatkan kualitas hidup karyawan.',
   client: 'Salah satu perusahaan di industri makanan.',
   cooperation: 'Lebih dari 3 tahun berturut-turut hingga sekarang.',
-  program: 'Annual — Strategic Health Partnership',
+  program: 'Annual - Strategic Health Partnership',
   programNote: 'Program kesehatan karyawan berlangganan.',
   mainGoal:
     'Meningkatkan kesehatan karyawan secara berkelanjutan dan mendukung produktivitas perusahaan.',
@@ -264,7 +260,7 @@ export const caseStudy = {
       period: 'Periode 2023-2024',
       points: [
         'Employee Engagement Survey meningkat dari 80 menjadi 94',
-        'Penurunan risiko kesehatan paling signifikan pada kategori sindrom metabolik sebesar 65%',
+        'Penurunan risiko kesehatan paling signifikan pada kategori Sindrom Metabolik sebesar 65%',
         'Peserta mengalami perbaikan kesehatan sebesar 95%',
         'Peningkatan kesadaran karyawan terhadap pola makan sehat dan pola hidup sehat sebesar 90%',
       ],
@@ -275,6 +271,53 @@ export const caseStudy = {
         'Peserta mengalami perbaikan kesehatan sebesar 95%',
         'Health Age naik 9% dari target sebelumnya dalam evaluasi lanjutan',
         'Peningkatan kesadaran karyawan terhadap pola makan sehat dan pola hidup sehat sebesar 92%',
+      ],
+    },
+  ],
+  resultPeriods: [
+    {
+      period: 'Periode 2023-2024',
+      metrics: [
+        {
+          title: 'Employee Engagement Survey',
+          description: 'Meningkat dari',
+          value: '80 -> 94',
+        },
+        {
+          title: 'Penurunan Risiko Kesehatan',
+          description: 'Paling signifikan pada kategori Sindrom Metabolik',
+          value: '↓ 65%',
+        },
+        {
+          title: 'Peserta Mengalami Perbaikan Kesehatan',
+          description: '',
+          value: '95%',
+        },
+        {
+          title: 'Peningkatan Kesadaran Karyawan',
+          description: 'Terhadap pola makan sehat dan pola hidup sehat',
+          value: '90%',
+        },
+      ],
+    },
+    {
+      period: 'Periode 2024-2025',
+      metrics: [
+        {
+          title: 'Peserta Mengalami Perbaikan Kesehatan',
+          description: '',
+          value: '95%',
+        },
+        {
+          title: 'Health Age',
+          description: 'Naik 9% dari target sebelumnya dalam evaluasi lanjutan',
+          value: '↑ 9%',
+        },
+        {
+          title: 'Peningkatan Kesadaran Karyawan',
+          description: 'Terhadap pola makan sehat dan pola hidup sehat',
+          value: '92%',
+        },
       ],
     },
   ],
@@ -309,21 +352,28 @@ export const corporateAchievableResults = [
 ];
 
 export const investmentFactors = [
-  'Jumlah karyawan',
-  'Durasi program',
-  'Tingkat intervensi yang dibutuhkan',
+  'Jumlah karyawan atau peserta program',
+  'Durasi dan frekuensi pendampingan',
+  'Tingkat intervensi serta kebutuhan reporting',
 ];
 
 export const wellnessConsultation = [
   'Weight management',
   'Healthy lifestyle habit',
-  'Mindful eating',
+  'Family wellness',
   'Healthy relationship with food',
   'Personalized nutrition guidance',
-  'Small group consultation',
+  'Sleep & daily routine awareness',
 ];
 
 export const wellnessWorkshopTopics = [
+  'Group support',
+  'Habit monitoring',
+  'Wellness check-in',
+  'Interactive sharing session',
+];
+
+export const wellnessSessionTopics = [
   'Healthy lifestyle',
   'Nutrition for productivity',
   'Mindful eating',
@@ -344,18 +394,53 @@ export const wellnessCollaboration = [
 
 export const wellnessGains = [
   'Personalized guidance',
-  'Diskusi interaktif',
-  'Pendekatan realistis dan berkelanjutan',
-  'Monitoring dan evaluasi',
+  'Interactive discussion',
+  'Sustainable approach',
+  'Simple monitoring',
 ];
 
 export const wellnessFit = [
+  'Healthy habit building',
+  'Weight management journey',
+  'Accountability support',
+  'Sustainable lifestyle',
+];
+
+export const wellnessSession = [
   'Community gathering',
   'Women community',
   'Brand collaboration',
   'School session',
   'Wellness activation',
   'Private healthy lifestyle session',
+];
+
+export const wellnessPackages = [
+  {
+    tier: 'Personal',
+    title: 'Nutrition & Wellness Consultation',
+    description:
+      'Pendampingan personal maupun keluarga untuk membantu membangun pola hidup sehat yang lebih realistis dan berkelanjutan.',
+    deliverables: wellnessGains,
+    fit: 'Cocok untuk weight management, family wellness, healthy relationship with food, personalized nutrition guidance, serta awareness rutinitas harian.',
+  },
+  {
+    tier: 'Journey',
+    title: 'Wellness Journey Program',
+    description:
+      'Program pendampingan 1-3 bulan dengan support group untuk membantu membangun kebiasaan sehat secara lebih konsisten.',
+    deliverables: wellnessWorkshopTopics,
+    fit: 'Cocok untuk healthy habit building, weight management journey, accountability support, dan sustainable lifestyle.',
+    recommended: true,
+  },
+  {
+    tier: 'Session',
+    title: 'Wellness Session & Workshop',
+    description:
+      'Seminar, workshop, dan sesi edukasi interaktif yang dirancang untuk komunitas, perusahaan, sekolah, maupun private group.',
+    deliverables: wellnessSessionTopics,
+    fit: 'Cocok untuk community gathering, women community, brand collaboration, school session, wellness activation, dan private healthy lifestyle session.',
+  },
 ];
 
 export const wellnessAdvantages = [
