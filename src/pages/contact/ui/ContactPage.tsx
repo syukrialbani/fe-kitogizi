@@ -1,13 +1,16 @@
 import AlternateEmailRoundedIcon from '@mui/icons-material/AlternateEmailRounded';
-import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
+import AssignmentTurnedInRoundedIcon from '@mui/icons-material/AssignmentTurnedInRounded';
+import BusinessCenterRoundedIcon from '@mui/icons-material/BusinessCenterRounded';
+import Diversity3RoundedIcon from '@mui/icons-material/Diversity3Rounded';
+import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
+import SpaRoundedIcon from '@mui/icons-material/SpaRounded';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import type { ChangeEvent, FormEvent } from 'react';
 import { useState } from 'react';
 import { contact, whatsappHref } from '../../../shared/config/site';
 import { ActionLink } from '../../../shared/ui/action-link/ActionLink';
 import { FinalCTA } from '../../../shared/ui/final-cta/FinalCTA';
-import { GlassCard } from '../../../shared/ui/glass-card/GlassCard';
 import { PageHero } from '../../../shared/ui/page-hero/PageHero';
 import { SectionHeader } from '../../../shared/ui/section-header/SectionHeader';
 import { ContactHeroVisual } from '../../../widgets/hero-visuals';
@@ -16,7 +19,6 @@ const serviceOptions = [
   'Corporate Wellness',
   'Wellness Experience',
   'School Wellness',
-  'Case Study Discussion',
   'General Inquiry',
 ];
 
@@ -26,6 +28,30 @@ const initialForm = {
   service: serviceOptions[0],
   message: '',
 };
+
+const contactChannels = [
+  {
+    title: 'WhatsApp Priority',
+    description: 'Untuk diskusi cepat, cek kebutuhan, dan mulai rekomendasi format program.',
+    value: contact.phoneDisplay,
+    href: whatsappHref,
+    icon: WhatsAppIcon,
+  },
+  {
+    title: 'Email Brief',
+    description: 'Untuk mengirim konteks program, proposal, atau detail kebutuhan institusi.',
+    value: contact.email,
+    href: `mailto:${contact.email}`,
+    icon: AlternateEmailRoundedIcon,
+  },
+];
+
+const quickBriefs = [
+  { label: 'Corporate', icon: BusinessCenterRoundedIcon },
+  { label: 'School', icon: SchoolRoundedIcon },
+  { label: 'Wellness', icon: SpaRoundedIcon },
+  { label: 'Community', icon: Diversity3RoundedIcon },
+];
 
 export const ContactPage = () => {
   const [form, setForm] = useState(initialForm);
@@ -60,8 +86,8 @@ export const ContactPage = () => {
         compact
         variant="contact"
         eyebrow="Hubungi Kami"
-        title="Diskusikan kebutuhan program kesehatan Anda bersama KitoGizi"
-        description="Sampaikan konteks perusahaan, sekolah, komunitas, atau event Anda. Tim KitoGizi akan membantu merekomendasikan format program yang paling sesuai."
+        title="Mulai diskusi program wellness dengan brief yang singkat dan jelas."
+        description="Sampaikan konteks perusahaan, sekolah, komunitas, atau event Anda. Tim KitoGizi akan membantu membaca kebutuhan dan merekomendasikan format program yang paling sesuai."
         actions={
           <>
             <ActionLink href={whatsappHref} target="_blank" icon="whatsapp">
@@ -75,40 +101,67 @@ export const ContactPage = () => {
         visual={<ContactHeroVisual />}
       />
 
-      <section className="section">
-        <div className="container contact-grid">
-          <div>
+      <section className="section contact-brief-section">
+        <div className="container contact-grid contact-brief-layout">
+          <div className="contact-channel-column">
             <SectionHeader
               eyebrow="Kontak"
-              title="Pilih kanal yang paling mudah untuk Anda"
-              description="CTA utama website diarahkan ke WhatsApp agar diskusi kebutuhan bisa dimulai lebih cepat."
+              title="Pilih kanal paling nyaman, lalu ceritakan konteksnya."
+              description="WhatsApp cocok untuk mulai cepat. Email bisa digunakan jika Anda sudah punya brief, deck, atau detail kebutuhan program."
             />
-            <div className="contact-card-stack">
-              <GlassCard className="contact-card">
-                <WhatsAppIcon aria-hidden="true" />
-                <div>
-                  <h3>WhatsApp</h3>
-                  <a href={whatsappHref} target="_blank" rel="noreferrer">{contact.phoneDisplay}</a>
-                </div>
-              </GlassCard>
-              <GlassCard className="contact-card">
-                <AlternateEmailRoundedIcon aria-hidden="true" />
-                <div>
-                  <h3>Email</h3>
-                  <a href={`mailto:${contact.email}`}>{contact.email}</a>
-                </div>
-              </GlassCard>
-              <GlassCard className="contact-card">
-                <LocationOnRoundedIcon aria-hidden="true" />
-                <div>
-                  <h3>Area Layanan</h3>
-                  <p>{contact.location}</p>
-                </div>
-              </GlassCard>
+            <div className="contact-card-stack contact-channel-list">
+              {contactChannels.map((channel, index) => {
+                const Icon = channel.icon;
+                const value = channel.href ? (
+                  <a href={channel.href} target={channel.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
+                    {channel.value}
+                  </a>
+                ) : (
+                  <p>{channel.value}</p>
+                );
+
+                return (
+                  <article className="contact-channel-card" key={channel.title}>
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <Icon aria-hidden="true" />
+                    <div>
+                      <h3>{channel.title}</h3>
+                      <p>{channel.description}</p>
+                      {value}
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+            <div className="contact-response-path">
+              <strong>Brief yang membantu kami merespons lebih tepat:</strong>
+              <div>
+                <span>Jenis program</span>
+                <span>Jumlah peserta</span>
+                <span>Tujuan utama</span>
+              </div>
             </div>
           </div>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-form contact-brief-form" onSubmit={handleSubmit}>
+            <div className="contact-form-head">
+              <div>
+                <span>Brief Cepat</span>
+                <strong>Kirim konteks awal ke WhatsApp</strong>
+              </div>
+              <AssignmentTurnedInRoundedIcon aria-hidden="true" />
+            </div>
+            <div className="contact-quick-briefs" aria-label="Jenis kebutuhan program">
+              {quickBriefs.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <span key={item.label}>
+                    <Icon aria-hidden="true" />
+                    {item.label}
+                  </span>
+                );
+              })}
+            </div>
             <div className="form-row">
               <label htmlFor="name">Nama</label>
               <input

@@ -8,7 +8,7 @@ type PageHeroProps = {
   visual?: ReactNode;
   meta?: ReactNode;
   compact?: boolean;
-  variant?: 'default' | 'home' | 'corporate' | 'wellness' | 'school' | 'contact' | 'plain';
+  variant?: 'default' | 'home' | 'corporate' | 'wellness' | 'school' | 'about' | 'contact' | 'plain';
 };
 
 export const PageHero = ({

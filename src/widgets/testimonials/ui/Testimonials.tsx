@@ -14,8 +14,8 @@ export const Testimonials = () => {
           description="Dampak program terasa saat strategi perusahaan bertemu perubahan kebiasaan harian peserta."
         />
         <div className="testimonial-grid">
-          {testimonials.map((item) => (
-            <GlassCard key={`${item.name}-${item.role}`} className="testimonial-card">
+          {testimonials.map((item, index) => (
+            <GlassCard key={`${item.name}-${item.role}-${index}`} className="testimonial-card">
               <FormatQuoteRoundedIcon aria-hidden="true" />
               <p>{item.quote}</p>
               <div>
