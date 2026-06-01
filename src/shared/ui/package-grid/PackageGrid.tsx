@@ -15,12 +15,14 @@ type PackageGridProps = {
   packages: PackageItem[];
   ctaLabel?: string;
   deliverableLabel?: string;
+  recommendedLabel?: string;
 };
 
 export const PackageGrid = ({
   packages,
   ctaLabel = 'Diskusikan Paket',
   deliverableLabel = 'Yang Didapatkan',
+  recommendedLabel = 'Recommended',
 }: PackageGridProps) => {
   return (
     <div className="package-grid">
@@ -31,7 +33,7 @@ export const PackageGrid = ({
               <p>{item.tier}</p>
               <h3>{item.title}</h3>
             </div>
-            {item.recommended ? <span className="recommended-badge">Recommended</span> : null}
+            {item.recommended ? <span className="recommended-badge">{recommendedLabel}</span> : null}
           </div>
           <div className="package-purpose">
             <span>Tujuan</span>

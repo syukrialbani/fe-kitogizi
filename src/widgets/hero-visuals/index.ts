@@ -3,5 +3,5 @@ export {
   CorporateHeroVisual,
   HomeHeroVisual,
   SchoolHeroVisual,
-  WellnessHeroVisual,
+  WellnessHeroVisual
 } from './ui/HeroVisuals';
