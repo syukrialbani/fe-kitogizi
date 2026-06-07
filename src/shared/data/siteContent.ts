@@ -590,9 +590,9 @@ export const schoolPackages = [
 export const testimonials = [
   {
     quote:
-      'Program ini membantu kami dalam mengelola kesehatan karyawan secara lebih terarah, khususnya dalam menindaklanjuti hasil Medical Check Up (MCU). Pendekatan yang dilakukan relevan dan dapat dijalankan secara berkelanjutan.',
-    name: 'PIC Program / HR',
-    role: 'Perusahaan Partner Kitogizi',
+      'Pendampingan Personalized Health Program oleh Kitogizi sangat membantu karyawan kami di Ajinomoto Indonesia Karawang Factory lebih memahami kondisi kesehatannya. Programnya mudah diikuti dan memberikan insight yang bermanfaat untuk diterapkan sehari-hari serta memberikan dampak signifikan dalam peningkatan kesehatan karyawan.',
+    name: 'Jevi S.',
+    role: 'HR Supervisor PT Ajinomoto Indonesia',
   },
   {
     quote: 'Berat badan menurun dan tubuh terasa lebih ringan serta bugar untuk beraktivitas.',
