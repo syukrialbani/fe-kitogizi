@@ -24,6 +24,7 @@ import {
   targetSegments,
 } from '../../../shared/data/siteContent';
 import { ActionLink } from '../../../shared/ui/action-link/ActionLink';
+import { CardCarousel } from '../../../shared/ui/card-carousel';
 import { FinalCTA } from '../../../shared/ui/final-cta/FinalCTA';
 import { PageHero } from '../../../shared/ui/page-hero/PageHero';
 import { SectionHeader } from '../../../shared/ui/section-header/SectionHeader';
@@ -54,7 +55,14 @@ const documentationImages = [
   contactConsultationImage,
   workplacePresentationImage,
   healthyPlateImage,
+  nutritionWorkshopImage,
+  corporateCollaborationImage,
 ];
+
+const documentationItems = programDocumentations.map((item, index) => ({
+  ...item,
+  image: documentationImages[index % documentationImages.length],
+}));
 
 export const HomePage = () => {
   return (
@@ -62,8 +70,8 @@ export const HomePage = () => {
       <PageHero
         variant="school"
         eyebrow="Dari MCU ke program nyata"
-        title="Mengubah Data Kesehatan Karyawan Menjadi Strategi yang Berdampak"
-        description="KitoGizi membantu perusahaan membaca hasil Medical Check Up, menemukan prioritas risiko, lalu menjalankannya sebagai program kesehatan yang terasa relevan untuk karyawan."
+        title="Membangun Kebiasaan Sehat yang Berdampak dan Berkelanjutan"
+        description="Kitogizi membantu individu, sekolah, dan perusahaan menciptakan perubahan kesehatan yang lebih terarah melalui edukasi, pendampingan, dan program wellness berbasis kebutuhan nyata."
         actions={
           <>
             <ActionLink href={whatsappHref} target="_blank" icon="whatsapp">
@@ -89,8 +97,8 @@ export const HomePage = () => {
           <div className="home-problem-copy">
             <SectionHeader
               eyebrow="Problem"
-              title="Data ada. Strategi belum bergerak."
-              description="Banyak perusahaan sudah menjalankan MCU, tetapi insight kesehatannya sering berhenti sebagai laporan. Padahal, di sanalah arah program wellness seharusnya dimulai."
+              title="Mengapa Program Kesehatan Sering Tidak Bertahan?"
+              description="Banyak program kesehatan dimulai dengan semangat tinggi, namun sulit dipertahankan karena tidak memiliki arah, pendampingan, atau strategi yang sesuai dengan kebutuhan peserta."
             />
             <div className="home-problem-emphasis">
               <strong>MCU tidak harus selesai di file PDF.</strong>
@@ -140,8 +148,8 @@ export const HomePage = () => {
           <div className="home-flow-copy">
             <SectionHeader
               eyebrow="Dari Data ke Program"
-              title="Dari angka MCU menjadi pengalaman wellness yang nyata"
-              description="Hasil MCU seharusnya menjadi dasar pengambilan keputusan, bukan sekadar arsip tahunan. KitoGizi membantu perusahaan mengubah data kesehatan menjadi program yang terarah, terukur, dan relevan dengan kebutuhan perusahaan."
+              title="Dari Data Kesehatan Menjadi Program yang Terarah"
+              description="Bagi perusahaan yang telah memiliki data Medical Check Up (MCU), Kitogizi membantu menerjemahkan hasil kesehatan menjadi strategi program yang relevan, terukur, dan dapat dievaluasi secara berkala."
             />
             <ActionLink href="/corporate-wellness#case-study-corporate" variant="secondary">
               Lihat Studi Kasus
@@ -171,8 +179,8 @@ export const HomePage = () => {
         <div className="container">
           <SectionHeader
             eyebrow="Layanan Kami"
-            title="Solusi yang terasa dekat dengan kebutuhan setiap audiens"
-            description="KitoGizi menghadirkan program wellness berbasis edukasi, pendampingan, dan pendekatan aplikatif. Setiap layanan dirancang dengan pendekatan ahli gizi yang evidence-based, relevan, dan berorientasi pada perubahan yang berkelanjutan."
+            title="Solusi Wellness untuk Berbagai Kebutuhan"
+            description="Kitogizi menghadirkan program wellness berbasis edukasi, pendampingan, dan pendekatan aplikatif untuk perusahaan, sekolah, komunitas, keluarga, maupun individu."
           />
           <div className="home-service-showcase">
             {homeServices.map((service, index) => {
@@ -232,22 +240,24 @@ export const HomePage = () => {
             <SectionHeader
               eyebrow="Corporate Wellness"
               title="Program bisa dimulai kecil, lalu tumbuh menjadi sistem"
-              description="KitoGizi menyediakan jalur program yang dapat dimulai dari edukasi dasar hingga pendampingan strategis tahunan."
+              description="Kitogizi menyediakan jalur program yang dapat dimulai dari edukasi dasar hingga pendampingan strategis tahunan."
             />
-            <ActionLink href="/corporate-wellness" variant="secondary">
+            <ActionLink href="/corporate-wellness#paket-corporate" variant="secondary">
               Lihat Detail Program
             </ActionLink>
           </div>
           <div className="home-program-timeline">
             {homeCorporatePrograms.map((program) => (
-              <article
-                key={program.title}
-                className={`home-program-step ${program.recommended ? 'is-recommended' : ''}`}
-              >
-                <span>{program.label}</span>
-                <h3>{program.title}</h3>
-                <p>{program.description}</p>
-              </article>
+              <a href={"/corporate-wellness#paket-corporate"} key={program.title} className="home-program-link">
+                <article
+                  key={program.title}
+                  className={`home-program-step ${program.recommended ? 'is-recommended' : ''}`}
+                >
+                  <span>{program.label}</span>
+                  <h3>{program.title}</h3>
+                  <p>{program.description}</p>
+                </article>
+              </a>
             ))}
           </div>
         </div>
@@ -259,7 +269,7 @@ export const HomePage = () => {
             align="center"
             eyebrow="Prinsip Kami"
             title="Kesehatan bukan hanya tentang diet, tetapi sistem hidup yang seimbang"
-            description="Pendekatan KitoGizi menggabungkan evidence, pendampingan ahli, penyesuaian kebutuhan, dan evaluasi hasil yang berkelanjutan."
+            description="Pendekatan Kitogizi menggabungkan evidence, pendampingan ahli, penyesuaian kebutuhan, dan evaluasi hasil yang berkelanjutan."
           />
           <div className="home-belief-cloud">
             {beliefPoints.map((point) => (
@@ -285,11 +295,13 @@ export const HomePage = () => {
             <SectionHeader
               eyebrow="Wellness Experience"
               title="Wellness experience yang lebih personal dan interaktif"
-              description="KitoGizi juga menghadirkan konsultasi, workshop, dan wellness session untuk individu, komunitas, private group, hingga berbagai bentuk kolaborasi healthy lifestyle."
+              description="Kitogizi juga menghadirkan konsultasi, workshop, dan wellness session untuk individu, komunitas, private group, hingga berbagai bentuk kolaborasi healthy lifestyle."
             />
             <div className="home-experience-list">
               {homeWellnessExperience.map((item) => (
-                <span key={item}>{item}</span>
+                <a href={item.href} key={item.label}>
+                  {item.label}
+                </a>
               ))}
             </div>
           </div>
@@ -304,25 +316,33 @@ export const HomePage = () => {
             title="Momen program yang terasa nyata"
             description="Cuplikan kegiatan konsultasi, seminar, workshop, dan aktivitas wellness yang membantu program terasa lebih nyata dan dekat dengan peserta."
           />
-          <div className="documentation-grid">
-            {programDocumentations.map((item, index) => (
-              <article className="documentation-card" key={item.title}>
+          <CardCarousel
+            ariaLabel="Carousel dokumentasi program Kitogizi"
+            className="documentation-carousel"
+            getKey={(item) => item.title}
+            items={documentationItems}
+            mobileVisibleCount={1}
+            nextLabel="Dokumentasi berikutnya"
+            previousLabel="Dokumentasi sebelumnya"
+            renderItem={(item, meta) => (
+              <article className={`documentation-card ${meta.isCenter ? 'is-center' : ''}`}>
                 <div className="documentation-image-slot">
-                  <img src={documentationImages[index]} alt="" />
+                  <img src={item.image} alt="" />
                   <span>{item.tag}</span>
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </article>
-            ))}
-          </div>
+            )}
+            visibleCount={3}
+          />
         </div>
       </section>
 
       <Testimonials />
       <FinalCTA
         title="Jangan Tunggu Risiko Kesehatan Menjadi Masalah Besar bagi Perusahaan Anda"
-        description="Mulai bangun program kesehatan yang berdampak. Diskusikan kebutuhan perusahaan Anda bersama tim KitoGizi untuk mendapatkan solusi yang tepat dan terarah."
+        description="Mulai bangun program kesehatan yang berdampak. Diskusikan kebutuhan perusahaan Anda bersama tim Kitogizi untuk mendapatkan solusi yang tepat dan terarah."
         primaryLabel="Hubungi Kami Sekarang"
         secondary={
           <ActionLink href="/kontak" variant="secondary">

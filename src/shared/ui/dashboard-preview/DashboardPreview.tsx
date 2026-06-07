@@ -42,7 +42,7 @@ export const DashboardPreview = ({ variant = 'corporate' }: DashboardPreviewProp
       <div className="dashboard-topline">
         <div className="dashboard-brand">
           <img src={brandAssets.logo} alt="" />
-          <span>KitoGizi</span>
+          <span>Kitogizi</span>
         </div>
         <span className="dashboard-status">Live</span>
       </div>

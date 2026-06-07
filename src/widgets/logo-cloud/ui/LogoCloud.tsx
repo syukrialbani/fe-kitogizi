@@ -9,9 +9,9 @@ export const LogoCloud = () => {
           align="center"
           eyebrow="Kolaborasi"
           title="Dipercaya oleh perusahaan dan institusi"
-          description="KitoGizi mendampingi program wellness di lingkungan corporate, pendidikan, komunitas, dan kesehatan publik."
+          description="Kitogizi mendampingi program wellness di lingkungan corporate, pendidikan, komunitas, dan kesehatan publik."
         />
-        <div className="logo-cloud" aria-label="Logo mitra KitoGizi">
+        <div className="logo-cloud" aria-label="Logo mitra Kitogizi">
           {partnerLogos.map((partner) => (
             <div className="logo-cloud-item" key={partner.name}>
               <img src={partner.image} alt={partner.name} />
