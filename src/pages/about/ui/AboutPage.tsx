@@ -48,9 +48,9 @@ export const AboutPage = () => {
     <>
       <PageHero
         variant="about"
-        eyebrow="Tentang KitoGizi"
+        eyebrow="Tentang Kitogizi"
         title="Partner wellness yang berbasis data, edukatif, aplikatif, dan berkelanjutan"
-        description="KitoGizi adalah partner wellness dan edukasi gizi yang membantu perusahaan, sekolah, komunitas, dan individu membangun kebiasaan sehat melalui program yang relevan dengan kebutuhan klien."
+        description="Kitogizi adalah partner wellness dan edukasi gizi yang membantu perusahaan, sekolah, komunitas, dan individu membangun kebiasaan sehat melalui program yang relevan dengan kebutuhan klien."
         actions={
           <>
             <ActionLink href={whatsappHref} target="_blank" icon="whatsapp">
@@ -69,7 +69,7 @@ export const AboutPage = () => {
           </div>
         }
         visual={
-          <div className="about-hero-visual" aria-label="Kolase program wellness KitoGizi">
+          <div className="about-hero-visual" aria-label="Kolase program wellness Kitogizi">
             <div className="about-hero-photo">
               <img src={consultationImage} alt="" />
               <div>
@@ -80,7 +80,7 @@ export const AboutPage = () => {
             <div className="about-hero-brand">
               <img src={brandAssets.logo} alt="" />
               <div>
-                <span>KitoGizi</span>
+                <span>Kitogizi</span>
                 <strong>Your Healthier Lifestyle Solution</strong>
               </div>
             </div>
@@ -111,7 +111,7 @@ export const AboutPage = () => {
           <div className="about-story-copy">
             <SectionHeader
               eyebrow="Profil"
-              title="KitoGizi hadir untuk membuat program sehat terasa lebih strategis."
+              title="Kitogizi hadir untuk membuat program sehat terasa lebih strategis."
               description="Kami tidak hanya memberikan edukasi gizi. Kami membantu organisasi membaca kebutuhan, memilih format program, lalu menyampaikan materi dengan cara yang dekat dengan peserta."
             />
             <div className="about-principle-flow">
@@ -157,7 +157,7 @@ export const AboutPage = () => {
             <SectionHeader
               eyebrow="Kolaborasi"
               title="Bekerja bersama berbagai institusi."
-              description="KitoGizi mendampingi program wellness di lingkungan corporate, pendidikan, komunitas, dan kesehatan publik."
+              description="Kitogizi mendampingi program wellness di lingkungan corporate, pendidikan, komunitas, dan kesehatan publik."
             />
             <div className="about-audience-strip">
               {audienceItems.map((item) => {
@@ -171,7 +171,7 @@ export const AboutPage = () => {
               })}
             </div>
           </div>
-          <div className="about-logo-cloud" aria-label="Logo mitra KitoGizi">
+          <div className="about-logo-cloud" aria-label="Logo mitra Kitogizi">
             {partnerLogos.map((partner) => (
               <div key={partner.name}>
                 <img src={partner.image} alt={partner.name} />
@@ -183,8 +183,8 @@ export const AboutPage = () => {
 
       <FinalCTA
         title="Mari bangun program wellness yang sesuai dengan konteks organisasi Anda"
-        description="Ceritakan kebutuhan tim, sekolah, komunitas, atau brand Anda kepada KitoGizi."
-        primaryLabel="Hubungi KitoGizi"
+        description="Ceritakan kebutuhan tim, sekolah, komunitas, atau brand Anda kepada Kitogizi."
+        primaryLabel="Hubungi Kitogizi"
       />
     </>
   );

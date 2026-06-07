@@ -211,7 +211,7 @@ export const SchoolWellnessPage = () => {
 
       <FinalCTA
         title="Diskusikan program untuk sekolah Anda"
-        description="KitoGizi siap membantu sekolah menghadirkan program wellness yang relevan, interaktif, dan sesuai dengan kebutuhan siswa."
+        description="Kitogizi siap membantu sekolah menghadirkan program wellness yang relevan, interaktif, dan sesuai dengan kebutuhan siswa."
         primaryLabel="Konsultasi Program Sekolah"
       />
     </>

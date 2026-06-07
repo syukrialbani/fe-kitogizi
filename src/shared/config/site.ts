@@ -1,5 +1,5 @@
 export const contact = {
-  brandName: 'KitoGizi',
+  brandName: 'Kitogizi',
   legalName: 'PT Kitojum Sehat Bersama',
   email: 'hello.kitogizi@gmail.com',
   phoneDisplay: '0821-2244-5687',
@@ -9,7 +9,7 @@ export const contact = {
 };
 
 export const whatsappMessage =
-  'Halo KitoGizi, saya ingin diskusi kebutuhan program wellness untuk perusahaan/institusi kami.';
+  'Halo Kitogizi, saya ingin diskusi kebutuhan program wellness untuk perusahaan/institusi kami.';
 
 export const createWhatsappHref = (message: string) =>
   `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -17,7 +17,7 @@ export const createWhatsappHref = (message: string) =>
 export const whatsappHref = createWhatsappHref(whatsappMessage);
 
 export const corporateWhatsappHref = createWhatsappHref(
-  'Halo KitoGizi, saya ingin konsultasi terkait program Corporate Wellness. Perusahaan kami sudah memiliki hasil MCU dan ingin mendiskusikan tindak lanjutnya.',
+  'Halo Kitogizi, saya ingin konsultasi terkait program Corporate Wellness. Perusahaan kami sudah memiliki hasil MCU dan ingin mendiskusikan tindak lanjutnya.',
 );
 
 export const navItems = [

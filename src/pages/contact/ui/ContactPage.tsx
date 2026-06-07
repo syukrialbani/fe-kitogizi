@@ -66,7 +66,7 @@ export const ContactPage = () => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const message = [
-      'Halo KitoGizi, saya ingin diskusi program.',
+      'Halo Kitogizi, saya ingin diskusi program.',
       `Nama: ${form.name || '-'}`,
       `Perusahaan/Institusi: ${form.organization || '-'}`,
       `Kebutuhan: ${form.service}`,
@@ -87,14 +87,14 @@ export const ContactPage = () => {
         variant="contact"
         eyebrow="Hubungi Kami"
         title="Mulai diskusi program wellness dengan brief yang singkat dan jelas."
-        description="Sampaikan konteks perusahaan, sekolah, komunitas, atau event Anda. Tim KitoGizi akan membantu membaca kebutuhan dan merekomendasikan format program yang paling sesuai."
+        description="Sampaikan konteks perusahaan, sekolah, komunitas, atau event Anda. Tim Kitogizi akan membantu membaca kebutuhan dan merekomendasikan format program yang paling sesuai."
         actions={
           <>
             <ActionLink href={whatsappHref} target="_blank" icon="whatsapp">
               Konsultasi via WhatsApp
             </ActionLink>
             <ActionLink href={`mailto:${contact.email}`} variant="secondary" icon="none">
-              Email KitoGizi
+              Email Kitogizi
             </ActionLink>
           </>
         }
@@ -213,7 +213,7 @@ export const ContactPage = () => {
 
       <FinalCTA
         title="Butuh rekomendasi program yang cepat dan jelas?"
-        description="Kirim brief singkat melalui form atau langsung hubungi WhatsApp KitoGizi."
+        description="Kirim brief singkat melalui form atau langsung hubungi WhatsApp Kitogizi."
         primaryLabel="Chat WhatsApp"
       />
     </>

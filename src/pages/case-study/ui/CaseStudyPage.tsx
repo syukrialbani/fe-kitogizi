@@ -100,7 +100,7 @@ export const CaseStudyPage = () => {
             align="center"
             eyebrow="Dampak Nyata dan Berkelanjutan"
             title="Kepercayaan selama 3 tahun berturut-turut menjadi bukti komitmen program"
-            description="KitoGizi menjadi partner strategis dalam mewujudkan karyawan yang sehat, produktif, dan berdaya saing."
+            description="Kitogizi menjadi partner strategis dalam mewujudkan karyawan yang sehat, produktif, dan berdaya saing."
           />
           <div className="case-impact-strip">
             {caseStudy.sustainableImpact.map((impact) => (

@@ -30,14 +30,14 @@ import corporateSceneImage from '../../../assets/corporate-seminar.jpg';
 import consultationImage from '../../../assets/health-insight-laptop.jpg';
 import { corporateWhatsappHref } from '../../../shared/config/site';
 import {
-  caseStudy,
-  corporateAchievableResults,
-  corporateAudience,
-  corporatePackages,
-  corporateProblems,
-  investmentFactors,
-  mcuOutcomePoints,
-  processSteps,
+    caseStudy,
+    corporateAchievableResults,
+    corporateAudience,
+    corporatePackages,
+    corporateProblems,
+    investmentFactors,
+    mcuOutcomePoints,
+    processSteps,
 } from '../../../shared/data/siteContent';
 import { ActionLink } from '../../../shared/ui/action-link/ActionLink';
 import { FinalCTA } from '../../../shared/ui/final-cta/FinalCTA';
@@ -90,7 +90,7 @@ export const CorporateWellnessPage = () => {
         variant="school"
         eyebrow="Corporate Wellness Program"
         title="Bangun Program Kesehatan Karyawan yang Terarah dan Berdampak"
-        description="KitoGizi membantu HR dan HSE membaca data Medical Check Up, menemukan prioritas risiko, lalu menjalankannya sebagai program kesehatan karyawan yang terarah, terukur, dan relevan dengan kondisi perusahaan."
+        description="Kitogizi membantu HR dan HSE membaca data Medical Check Up, menemukan prioritas risiko, lalu menjalankannya sebagai program kesehatan karyawan yang terarah, terukur, dan relevan dengan kondisi perusahaan."
         actions={
           <>
             <ActionLink href={corporateWhatsappHref} target="_blank" icon="calendar">
@@ -118,7 +118,7 @@ export const CorporateWellnessPage = () => {
             <span>Gap utama setelah MCU</span>
             <h2>Data sudah ada. Yang sering belum ada adalah arah tindak lanjutnya.</h2>
             <p>
-              KitoGizi membantu tim HR, HSE, dan manajemen membaca sinyal kesehatan karyawan,
+              Kitogizi membantu tim HR, HSE, dan manajemen membaca sinyal kesehatan karyawan,
               menentukan prioritas, lalu membuat program yang bisa dijalankan bertahap.
             </p>
             <div className="corporate-problem-mini-stats">
@@ -205,7 +205,7 @@ export const CorporateWellnessPage = () => {
             <SectionHeader
               eyebrow="Siapa yang Kami Bantu"
               title="Program disesuaikan untuk kebutuhan lapangan dan perkantoran."
-              description="KitoGizi membantu perusahaan membangun tindak lanjut kesehatan yang lebih sistematis, baik untuk lingkungan industri maupun kantor."
+              description="Kitogizi membantu perusahaan membangun tindak lanjut kesehatan yang lebih sistematis, baik untuk lingkungan industri maupun kantor."
             />
             <div className="corporate-audience-grid">
               {corporateAudience.map((audience, index) => {
@@ -376,7 +376,7 @@ export const CorporateWellnessPage = () => {
                 menghasilkan program yang berdampak dan terukur.
               </p>
               <div className="case-footer-brand">
-                <strong>KitoGizi</strong>
+                <strong>Kitogizi</strong>
                 <span>
                   Partner strategis Anda dalam mewujudkan karyawan yang sehat, produktif, dan
                   berdaya saing.
@@ -445,7 +445,7 @@ export const CorporateWellnessPage = () => {
 
       <FinalCTA
         title="Diskusikan Kebutuhan Perusahaan Anda"
-        description="Tim KitoGizi siap membantu merancang program kesehatan yang sesuai dengan kondisi dan tujuan perusahaan Anda."
+        description="Tim Kitogizi siap membantu merancang program kesehatan yang sesuai dengan kondisi dan tujuan perusahaan Anda."
         primaryLabel="Hubungi via WhatsApp"
         primaryHref={corporateWhatsappHref}
       />

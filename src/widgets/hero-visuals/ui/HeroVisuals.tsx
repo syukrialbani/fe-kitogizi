@@ -18,12 +18,12 @@ import { brandAssets } from '../../../shared/data/siteContent';
 
 export const HomeHeroVisual = () => {
   return (
-    <div className="home-dashboard-visual" aria-label="Foto dashboard insight kesehatan KitoGizi">
+    <div className="home-dashboard-visual" aria-label="Foto dashboard insight kesehatan Kitogizi">
       <img className="home-dashboard-image" src={healthInsightImage} alt="" />
       <div className="home-dashboard-overlay">
         <div className="visual-brand">
           <img src={brandAssets.logo} alt="" />
-          <span>KitoGizi Insight</span>
+          <span>Kitogizi Insight</span>
         </div>
         <span className="visual-live">Live program</span>
         <strong>Dari hasil MCU ke aksi wellness yang bisa diukur.</strong>
@@ -101,7 +101,7 @@ export const CorporateHeroVisual = () => {
 
 export const WellnessHeroVisual = () => {
   return (
-    <div className="wellness-photo-visual" aria-label="Foto wellness experience KitoGizi">
+    <div className="wellness-photo-visual" aria-label="Foto wellness experience Kitogizi">
       <img className="wellness-photo-image" src={wellnessYogaImage} alt="" />
       <div className="wellness-photo-gradient" />
       <div className="wellness-photo-top">
@@ -185,7 +185,7 @@ export const SchoolHeroVisual = () => {
 
 export const ContactHeroVisual = () => {
   return (
-    <div className="contact-photo-visual" aria-label="Foto diskusi program wellness KitoGizi">
+    <div className="contact-photo-visual" aria-label="Foto diskusi program wellness Kitogizi">
       <img className="contact-photo-image" src={contactConsultationImage} alt="" />
       <div className="contact-photo-gradient" />
       <div className="contact-photo-top">

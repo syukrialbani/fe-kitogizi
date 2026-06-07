@@ -30,10 +30,10 @@ export const impactStats = [
 ];
 
 export const homeProblems = [
-  'MCU hanya menjadi laporan',
-  'Tidak ada tindak lanjut program',
-  'Risiko kesehatan karyawan tetap tinggi',
-  'Program kesehatan tidak terarah',
+  'Edukasi tidak berlanjut menjadi kebiasaan',
+  'Program berjalan tanpa target yang jelas',
+  'Risiko kesehatan tidak terkelola sejak dini',
+  'Perubahan sulit dipertahankan dalam jangka panjang',
 ];
 
 export const processSteps = [
@@ -116,16 +116,19 @@ export const homeCorporatePrograms = [
     label: 'Basic',
     title: 'Awareness Program',
     description: 'Edukasi untuk meningkatkan kesadaran kesehatan karyawan.',
+    href: '/corporate-wellness#awareness-program',
   },
   {
     label: 'Premium',
     title: 'Targeted Intervention',
     description: 'Program intervensi berdasarkan kebutuhan karyawan.',
+    href: '/corporate-wellness#targeted-intervention',
   },
   {
     label: 'Recommended',
     title: 'Annual — Strategic Health Partnership',
     description: 'Pendampingan jangka panjang berbasis data.',
+    href: '/corporate-wellness#annual-strategic-health-partnership',
     recommended: true,
   },
 ];
@@ -140,9 +143,22 @@ export const beliefPoints = [
 ];
 
 export const homeWellnessExperience = [
-  'Nutrition Consultation',
-  'Wellness Session & Workshop',
-  'Wellness Session & Workshop, Community & Brand Collaboration',
+  {
+    label: 'Nutrition & Wellness Consultation',
+    href: '/wellness-experience#nutrition-wellness-consultation',
+  },
+  {
+    label: 'Wellness Journey Program',
+    href: '/wellness-experience#wellness-journey-program',
+  },
+  {
+    label: 'Wellness Session & Workshop',
+    href: '/wellness-experience#wellness-session-workshop',
+  },
+  {
+    label: 'Brand Collaboration',
+    href: '/wellness-experience#brand-collaboration',
+  },
 ];
 
 export const programDocumentations = [
@@ -160,6 +176,49 @@ export const programDocumentations = [
     title: 'Workshop interaktif',
     description: 'Dokumentasi aktivitas workshop, challenge, dan campaign yang melibatkan peserta.',
     tag: 'Workshop',
+  },
+  {
+    title: 'Healthy lifestyle challenge',
+    description: 'Dokumentasi aktivitas kebiasaan sehat yang dibuat ringan, konsisten, dan dekat dengan rutinitas peserta.',
+    tag: 'Challenge',
+  },
+  {
+    title: 'Kolaborasi program komunitas',
+    description: 'Dokumentasi sesi kolaborasi bersama komunitas, institusi, dan tim untuk membangun budaya sehat.',
+    tag: 'Kolaborasi',
+  },
+];
+
+export const wellnessExperienceDocumentations = [
+  {
+    title: 'Sesi konsultasi pola makan personal',
+    description:
+      'Cuplikan diskusi kebutuhan peserta, review kebiasaan harian, dan rekomendasi yang lebih mudah dijalankan.',
+    tag: 'Konsultasi',
+  },
+  {
+    title: 'Wellness journey dan habit check-in',
+    description:
+      'Dokumentasi pendampingan bertahap, support group, serta monitoring progres peserta selama program berjalan.',
+    tag: 'Journey',
+  },
+  {
+    title: 'Praktik healthy plate dan cooking demo',
+    description:
+      'Momen peserta belajar menyusun pilihan makan sehat melalui demo, aktivitas, dan praktik yang interaktif.',
+    tag: 'Praktik',
+  },
+  {
+    title: 'Workshop komunitas dan private group',
+    description:
+      'Aktivasi wellness untuk komunitas, sekolah, perusahaan, atau private group dengan tema yang disesuaikan.',
+    tag: 'Workshop',
+  },
+  {
+    title: 'Kolaborasi brand healthy lifestyle',
+    description:
+      'Dokumentasi sesi bersama brand, studio, dan komunitas untuk campaign hidup sehat yang relevan.',
+    tag: 'Kolaborasi',
   },
 ];
 
@@ -417,6 +476,7 @@ export const wellnessSession = [
 
 export const wellnessPackages = [
   {
+    id: 'nutrition-wellness-consultation',
     tier: 'Personal',
     title: 'Nutrition & Wellness Consultation',
     description:
@@ -425,6 +485,7 @@ export const wellnessPackages = [
     fit: 'Cocok untuk weight management, family wellness, healthy relationship with food, personalized nutrition guidance, serta awareness rutinitas harian.',
   },
   {
+    id: 'wellness-journey-program',
     tier: 'Journey',
     title: 'Wellness Journey Program',
     description:
@@ -434,12 +495,22 @@ export const wellnessPackages = [
     recommended: true,
   },
   {
+    id: 'wellness-session-workshop',
     tier: 'Session',
     title: 'Wellness Session & Workshop',
     description:
       'Seminar, workshop, dan sesi edukasi interaktif yang dirancang untuk komunitas, perusahaan, sekolah, maupun private group.',
     deliverables: wellnessSessionTopics,
     fit: 'Cocok untuk community gathering, women community, brand collaboration, school session, wellness activation, dan private healthy lifestyle session.',
+  },
+  {
+    id: 'brand-collaboration',
+    tier: 'Collaboration',
+    title: 'Brand Collaboration',
+    description:
+      'Kitogizi terbuka untuk kolaborasi bersama komunitas, brand, studio wellness, sekolah, maupun berbagai program healthy lifestyle dan edukasi kesehatan.',
+    deliverables: wellnessCollaboration,
+    fit: 'Kami percaya bahwa wellness dapat dibangun melalui pengalaman yang lebih interaktif, relevan, dan dekat dengan kehidupan sehari-hari.',
   },
 ];
 
@@ -519,9 +590,9 @@ export const schoolPackages = [
 export const testimonials = [
   {
     quote:
-      'Program ini membantu kami dalam mengelola kesehatan karyawan secara lebih terarah, khususnya dalam menindaklanjuti hasil Medical Check Up (MCU). Pendekatan yang dilakukan relevan dan dapat dijalankan secara berkelanjutan.',
-    name: 'PIC Program / HR',
-    role: 'Perusahaan Partner KitoGizi',
+      'Pendampingan Personalized Health Program oleh Kitogizi sangat membantu karyawan kami di Ajinomoto Indonesia Karawang Factory lebih memahami kondisi kesehatannya. Programnya mudah diikuti dan memberikan insight yang bermanfaat untuk diterapkan sehari-hari serta memberikan dampak signifikan dalam peningkatan kesehatan karyawan.',
+    name: 'Jevi S.',
+    role: 'HR Supervisor PT Ajinomoto Indonesia',
   },
   {
     quote: 'Berat badan menurun dan tubuh terasa lebih ringan serta bugar untuk beraktivitas.',
