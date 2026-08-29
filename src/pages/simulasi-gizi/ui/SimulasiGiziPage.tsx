@@ -191,32 +191,30 @@ export const SimulasiGiziPage: React.FC = () => {
                   </div>
 
                   <div className="form-grid-2">
-                    <div className="form-grid-2-inner" style={{ gridColumn: 'span 2' }}>
-                      <div className="form-field">
-                        <label htmlFor="input-weight">Berat Badan (kg) *</label>
-                        <input
-                          id="input-weight"
-                          type="number"
-                          placeholder="60"
-                          value={formData.weightKg || ''}
-                          onChange={(e) => handleInputChange('weightKg', parseFloat(e.target.value) || 0)}
-                          className={errors.weightKg ? 'input-error' : ''}
-                        />
-                        {errors.weightKg && <span className="field-error-text">{errors.weightKg}</span>}
-                      </div>
+                    <div className="form-field">
+                      <label htmlFor="input-weight">Berat Badan (kg) *</label>
+                      <input
+                        id="input-weight"
+                        type="number"
+                        placeholder="60"
+                        value={formData.weightKg || ''}
+                        onChange={(e) => handleInputChange('weightKg', parseFloat(e.target.value) || 0)}
+                        className={errors.weightKg ? 'input-error' : ''}
+                      />
+                      {errors.weightKg && <span className="field-error-text">{errors.weightKg}</span>}
+                    </div>
 
-                      <div className="form-field">
-                        <label htmlFor="input-height">Tinggi Badan (cm) *</label>
-                        <input
-                          id="input-height"
-                          type="number"
-                          placeholder="165"
-                          value={formData.heightCm || ''}
-                          onChange={(e) => handleInputChange('heightCm', parseFloat(e.target.value) || 0)}
-                          className={errors.heightCm ? 'input-error' : ''}
-                        />
-                        {errors.heightCm && <span className="field-error-text">{errors.heightCm}</span>}
-                      </div>
+                    <div className="form-field">
+                      <label htmlFor="input-height">Tinggi Badan (cm) *</label>
+                      <input
+                        id="input-height"
+                        type="number"
+                        placeholder="165"
+                        value={formData.heightCm || ''}
+                        onChange={(e) => handleInputChange('heightCm', parseFloat(e.target.value) || 0)}
+                        className={errors.heightCm ? 'input-error' : ''}
+                      />
+                      {errors.heightCm && <span className="field-error-text">{errors.heightCm}</span>}
                     </div>
                   </div>
 

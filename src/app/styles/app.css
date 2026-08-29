@@ -9674,8 +9674,10 @@
   color: var(--ink-strong);
 }
 
+.form-field input,
 .form-field input[type='text'],
 .form-field input[type='number'],
+.form-field input[type='tel'],
 .form-field select {
   width: 100%;
   padding: 0.8rem 1rem;
