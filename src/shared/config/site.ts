@@ -22,6 +22,7 @@ export const corporateWhatsappHref = createWhatsappHref(
 
 export const navItems = [
   { label: 'Beranda', href: '/' },
+  { label: 'Nutrition Check', href: '/nutrition-check' },
   { label: 'Corporate Wellness', href: '/corporate-wellness' },
   { label: 'Wellness Experience', href: '/wellness-experience' },
   { label: 'School Wellness', href: '/school-wellness' },
