@@ -132,11 +132,11 @@ export const SimulasiGiziPage: React.FC = () => {
 
   return (
     <div className="simulasi-gizi-page">
-      {/* <PageHero
+      <PageHero
         title="Kitogizi Nutrition Check"
         description="Evaluasi mandiri kebiasaan hidup & gizi harian Anda secara cepat dan berbasis data untuk mendapatkan gambaran kesehatan serta rekomendasi terarah."
         eyebrow="Simulasi & Self-Check Gizi"
-      /> */}
+      />
 
       <section className="section">
         <div className="container">
