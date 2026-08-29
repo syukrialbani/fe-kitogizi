@@ -1,9 +1,11 @@
 export interface NutritionCheckInput {
   name: string;
+  whatsappNumber: string;
   weightKg: number;
   heightCm: number;
   biggestChallenge: string;
   goal: string;
+  consentAgreed: boolean;
   
   // Pola Makan
   veggiePortion: '3-4' | '1-2' | '0'; // 2, 1, 0

@@ -50,6 +50,7 @@ export const AdminDashboardPage: React.FC = () => {
       'ID',
       'Tanggal',
       'Nama',
+      'No. WhatsApp',
       'BB (kg)',
       'TB (cm)',
       'IMT',
@@ -59,12 +60,14 @@ export const AdminDashboardPage: React.FC = () => {
       'Domain Terendah',
       'Tantangan Terbesar',
       'Harapan / Target',
+      'Persetujuan Privasi',
     ];
 
     const rows = submissions.map((sub) => [
       sub.id,
       new Date(sub.createdAt).toLocaleString('id-ID'),
       `"${sub.input.name.replace(/"/g, '""')}"`,
+      `"${sub.input.whatsappNumber || '-'}"`,
       sub.input.weightKg,
       sub.input.heightCm,
       sub.bmi,
@@ -74,6 +77,7 @@ export const AdminDashboardPage: React.FC = () => {
       `"${sub.lowestDomains.join(', ')}"`,
       `"${sub.input.biggestChallenge.replace(/"/g, '""')}"`,
       `"${sub.input.goal.replace(/"/g, '""')}"`,
+      `"${sub.input.consentAgreed ? 'Disetujui' : 'Tidak'}"`,
     ]);
 
     const csvContent = 'data:text/csv;charset=utf-8,\uFEFF' + [headers.join(','), ...rows.map((e) => e.join(','))].join('\n');
@@ -108,6 +112,7 @@ export const AdminDashboardPage: React.FC = () => {
     .filter((sub) => {
       const matchSearch =
         sub.input.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (sub.input.whatsappNumber && sub.input.whatsappNumber.includes(searchTerm)) ||
         sub.input.biggestChallenge.toLowerCase().includes(searchTerm.toLowerCase()) ||
         sub.input.goal.toLowerCase().includes(searchTerm.toLowerCase());
 
@@ -235,6 +240,7 @@ export const AdminDashboardPage: React.FC = () => {
                     <tr>
                       <th>Tanggal</th>
                       <th>Nama User</th>
+                      <th>No. WhatsApp</th>
                       <th>BB / TB / IMT</th>
                       <th>Skor Gizi</th>
                       <th>Kategori</th>
@@ -259,6 +265,17 @@ export const AdminDashboardPage: React.FC = () => {
                         </td>
                         <td>
                           <strong className="user-name">{sub.input.name}</strong>
+                        </td>
+                        <td>
+                          <a
+                            href={`https://wa.me/${sub.input.whatsappNumber ? sub.input.whatsappNumber.replace(/[^0-9]/g, '') : ''}`}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="wa-link-table"
+                            title="Chat WhatsApp"
+                          >
+                            <WhatsAppIcon style={{ fontSize: '1rem', color: '#25d366' }} /> {sub.input.whatsappNumber || '-'}
+                          </a>
                         </td>
                         <td>
                           <div className="metrics-compact">
@@ -322,6 +339,10 @@ export const AdminDashboardPage: React.FC = () => {
                   <strong className="value">{selectedSubmission.input.name}</strong>
                 </div>
                 <div className="profile-col">
+                  <span className="label">No. WhatsApp:</span>
+                  <strong className="value" style={{ color: '#009f9d' }}>{selectedSubmission.input.whatsappNumber || '-'}</strong>
+                </div>
+                <div className="profile-col">
                   <span className="label">Waktu Simulasi:</span>
                   <span className="value">{new Date(selectedSubmission.createdAt).toLocaleString('id-ID')}</span>
                 </div>
@@ -329,6 +350,12 @@ export const AdminDashboardPage: React.FC = () => {
                   <span className="label">Postur Tubuh:</span>
                   <span className="value">
                     {selectedSubmission.input.weightKg} kg / {selectedSubmission.input.heightCm} cm (IMT: {selectedSubmission.bmi} - {selectedSubmission.bmiCategory})
+                  </span>
+                </div>
+                <div className="profile-col">
+                  <span className="label">Persetujuan Privasi:</span>
+                  <span className="value" style={{ color: '#27ae60', fontWeight: 'bold' }}>
+                    {selectedSubmission.input.consentAgreed ? '✓ Disetujui User' : 'Belum'}
                   </span>
                 </div>
               </div>
@@ -379,14 +406,20 @@ export const AdminDashboardPage: React.FC = () => {
 
             <div className="modal-footer">
               <a
-                href={createWhatsappHref(
-                  `Halo ${selectedSubmission.input.name}, kami dari tim Ahli Gizi Kitogizi melihat hasil Nutrition Check Anda (Skor: ${selectedSubmission.totalPercentage}%, Kategori: ${selectedSubmission.totalCategory}). Apakah Anda ada waktu untuk diskusi konseling gizi?`
-                )}
+                href={
+                  selectedSubmission.input.whatsappNumber
+                    ? `https://wa.me/${selectedSubmission.input.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(
+                        `Halo ${selectedSubmission.input.name}, kami dari tim Ahli Gizi Kitogizi melihat hasil Nutrition Check Anda (Skor: ${selectedSubmission.totalPercentage}%, Kategori: ${selectedSubmission.totalCategory}). Apakah Anda ada waktu untuk diskusi konseling gizi?`
+                      )}`
+                    : createWhatsappHref(
+                        `Halo ${selectedSubmission.input.name}, kami dari tim Ahli Gizi Kitogizi melihat hasil Nutrition Check Anda (Skor: ${selectedSubmission.totalPercentage}%, Kategori: ${selectedSubmission.totalCategory}). Apakah Anda ada waktu untuk diskusi konseling gizi?`
+                      )
+                }
                 target="_blank"
                 rel="noreferrer"
                 className="modal-wa-btn"
               >
-                <WhatsAppIcon /> Hubungi User via WhatsApp
+                <WhatsAppIcon /> Hubungi {selectedSubmission.input.name} via WhatsApp
               </a>
               <button onClick={() => setSelectedSubmission(null)} className="modal-secondary-btn">
                 Tutup

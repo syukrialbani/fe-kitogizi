@@ -1,4 +1,6 @@
+import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 import BusinessCenterRoundedIcon from '@mui/icons-material/BusinessCenterRounded';
+import CalculateRoundedIcon from '@mui/icons-material/CalculateRounded';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import CorporateFareRoundedIcon from '@mui/icons-material/CorporateFareRounded';
 import DataUsageRoundedIcon from '@mui/icons-material/DataUsageRounded';
@@ -6,6 +8,7 @@ import Groups2RoundedIcon from '@mui/icons-material/Groups2Rounded';
 import HealthAndSafetyRoundedIcon from '@mui/icons-material/HealthAndSafetyRounded';
 import ReportProblemRoundedIcon from '@mui/icons-material/ReportProblemRounded';
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
+import { Link } from 'react-router-dom';
 import contactConsultationImage from '../../../assets/contact-consultation.jpg';
 import corporateCollaborationImage from '../../../assets/corporate-meeting.jpg';
 import healthyPlateImage from '../../../assets/healthy-plate.jpg';
@@ -139,6 +142,29 @@ export const HomePage = () => {
                 <p>{stat.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Soft-Selling Nutrition Check Banner */}
+      <section className="section-compact home-simulasi-banner-section">
+        <div className="container">
+          <div className="home-simulasi-banner-card">
+            <div className="simulasi-banner-content">
+              <span className="simulasi-banner-badge">
+                <CalculateRoundedIcon style={{ fontSize: '1rem', verticalAlign: 'middle', marginRight: '4px' }} />
+                Self-Check Gratis • 2 Menit
+              </span>
+              <h2>Ingin Tahu Seberapa Sehat Pola Hidup & Kebiasaan Gizi Anda?</h2>
+              <p>
+                Ikuti <strong>Kitogizi Nutrition Check</strong> untuk mendapatkan skor kebiasaan hidup, analisis Indeks Massa Tubuh (IMT), serta arahan personal dari Ahli Gizi secara cepat tanpa komitmen.
+              </p>
+            </div>
+            <div className="simulasi-banner-action">
+              <Link to="/simulasi-gizi" className="simulasi-banner-btn">
+                Mulai Simulasi Gizi (Gratis) <ArrowForwardRoundedIcon />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

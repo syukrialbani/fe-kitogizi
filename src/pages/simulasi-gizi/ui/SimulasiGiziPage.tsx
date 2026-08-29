@@ -16,10 +16,12 @@ import { createWhatsappHref } from '../../../shared/config/site';
 
 const INITIAL_FORM: NutritionCheckInput = {
   name: '',
+  whatsappNumber: '',
   weightKg: 60,
   heightCm: 165,
   biggestChallenge: 'Sulit konsisten makan sehat',
   goal: 'Menjaga berat badan ideal & kebugaran',
+  consentAgreed: false,
   veggiePortion: '3-4',
   fruitPortion: '2-3',
   waterIntake: '>=2L',
@@ -75,12 +77,23 @@ export const SimulasiGiziPage: React.FC = () => {
       newErrors.name = 'Nama lengkap wajib diisi.';
     }
 
+    const cleanWa = formData.whatsappNumber.replace(/[^0-9]/g, '');
+    if (!formData.whatsappNumber.trim()) {
+      newErrors.whatsappNumber = 'Nomor WhatsApp wajib diisi.';
+    } else if (cleanWa.length < 9 || cleanWa.length > 15) {
+      newErrors.whatsappNumber = 'Masukkan nomor WhatsApp yang valid (minimal 9 digit).';
+    }
+
     if (!formData.weightKg || formData.weightKg < 20 || formData.weightKg > 300) {
       newErrors.weightKg = 'Berat badan harus diisi antara 20 - 300 kg.';
     }
 
     if (!formData.heightCm || formData.heightCm < 50 || formData.heightCm > 250) {
       newErrors.heightCm = 'Tinggi badan harus diisi antara 50 - 250 cm.';
+    }
+
+    if (!formData.consentAgreed) {
+      newErrors.consentAgreed = 'Anda harus menyetujui pernyataan persetujuan kebijakan data & privasi untuk melanjutkan.';
     }
 
     setErrors(newErrors);
@@ -163,7 +176,22 @@ export const SimulasiGiziPage: React.FC = () => {
                       {errors.name && <span className="field-error-text">{errors.name}</span>}
                     </div>
 
-                    <div className="form-grid-2-inner">
+                    <div className="form-field">
+                      <label htmlFor="input-wa">Nomor WhatsApp (Aktif) *</label>
+                      <input
+                        id="input-wa"
+                        type="tel"
+                        placeholder="Contoh: 08123456789"
+                        value={formData.whatsappNumber}
+                        onChange={(e) => handleInputChange('whatsappNumber', e.target.value)}
+                        className={errors.whatsappNumber ? 'input-error' : ''}
+                      />
+                      {errors.whatsappNumber && <span className="field-error-text">{errors.whatsappNumber}</span>}
+                    </div>
+                  </div>
+
+                  <div className="form-grid-2">
+                    <div className="form-grid-2-inner" style={{ gridColumn: 'span 2' }}>
                       <div className="form-field">
                         <label htmlFor="input-weight">Berat Badan (kg) *</label>
                         <input
@@ -601,6 +629,20 @@ export const SimulasiGiziPage: React.FC = () => {
                       </div>
                     </div>
                   </div>
+                </div>
+
+                <div className="form-consent-box">
+                  <label className="checkbox-consent-label">
+                    <input
+                      type="checkbox"
+                      checked={formData.consentAgreed}
+                      onChange={(e) => handleInputChange('consentAgreed', e.target.checked)}
+                    />
+                    <span>
+                      Saya menyetujui bahwa data dan nomor WhatsApp yang saya berikan dapat digunakan oleh tim Ahli Gizi Kitogizi untuk keperluan analisis, konseling, dan penyampaian hasil evaluasi gizi.
+                    </span>
+                  </label>
+                  {errors.consentAgreed && <div className="field-error-text" style={{ marginTop: '0.4rem' }}>{errors.consentAgreed}</div>}
                 </div>
 
                 <div className="form-actions">

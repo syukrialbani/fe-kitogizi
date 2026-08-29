@@ -10759,3 +10759,143 @@
   cursor: pointer;
 }
 
+/* ==========================================================================
+   SOFT SELLING BANNER & PRIVACY CONSENT STYLES
+   ========================================================================== */
+
+.home-simulasi-banner-section {
+  padding: 1.5rem 0 3.5rem;
+}
+
+.home-simulasi-banner-card {
+  background: linear-gradient(135deg, rgba(0, 159, 157, 0.12), rgba(255, 246, 226, 0.65) 60%, rgba(232, 247, 243, 0.9));
+  border: 1px solid rgba(0, 159, 157, 0.25);
+  border-radius: 1.5rem;
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 15px 35px rgba(0, 159, 157, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.simulasi-banner-content {
+  max-width: 44rem;
+}
+
+.simulasi-banner-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.85rem;
+  background: #ffffff;
+  border: 1px solid rgba(0, 159, 157, 0.3);
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--brand-teal-strong);
+  margin-bottom: 0.75rem;
+}
+
+.simulasi-banner-content h2 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--ink-strong);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.simulasi-banner-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-body);
+}
+
+.simulasi-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--brand-teal), var(--brand-teal-strong));
+  border-radius: 0.9rem;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0, 159, 157, 0.3);
+  transition: all 0.25s ease;
+}
+
+.simulasi-banner-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 159, 157, 0.4);
+}
+
+@media (max-width: 768px) {
+  .home-simulasi-banner-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem;
+    gap: 1.25rem;
+  }
+
+  .simulasi-banner-content h2 {
+    font-size: 1.35rem;
+  }
+
+  .simulasi-banner-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.form-consent-box {
+  background: rgba(232, 247, 243, 0.5);
+  border: 1px solid rgba(0, 159, 157, 0.2);
+  border-radius: 1rem;
+  padding: 1.1rem 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-consent-label input[type='checkbox'] {
+  accent-color: var(--brand-teal);
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0.15rem;
+  cursor: pointer;
+}
+
+.checkbox-consent-label span {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--ink-strong);
+  font-weight: 500;
+}
+
+.wa-link-table {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--ink-strong);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  transition: color 0.2s ease;
+}
+
+.wa-link-table:hover {
+  color: var(--brand-teal-strong);
+  text-decoration: underline;
+}
+
+
