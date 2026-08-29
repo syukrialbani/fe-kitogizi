@@ -12,7 +12,6 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { calculateNutritionCheck } from '../../../shared/lib/nutritionCalculator';
 import type { NutritionCheckInput, NutritionCheckResult } from '../../../shared/lib/nutritionCalculator';
 import { storageService } from '../../../shared/lib/storageService';
-import { PageHero } from '../../../shared/ui/page-hero/PageHero';
 import { createWhatsappHref } from '../../../shared/config/site';
 
 const INITIAL_FORM: NutritionCheckInput = {
